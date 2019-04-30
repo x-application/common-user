@@ -1,7 +1,7 @@
 package x.app.common.user.exception
 
 import x.app.common.AbstractException
-import x.app.common.user.UserIdentifier
+import x.app.common.user.UserIdentifiable
 
 /**
  *   @Project: common-user
@@ -9,7 +9,7 @@ import x.app.common.user.UserIdentifier
  *   @Author:  Iamee
  *   @Date:    2019-04-27 23:32
  */
-abstract class AbstractUserException : AbstractException, UserIdentifier {
+abstract class AbstractUserException : AbstractException, UserIdentifiable {
 
     final override var userId: String = ""
 

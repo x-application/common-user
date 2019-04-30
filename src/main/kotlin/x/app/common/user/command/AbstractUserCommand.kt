@@ -1,7 +1,8 @@
 package x.app.common.user.command
 
 import x.app.common.AbstractCommand
-import x.app.common.user.UserIdentifier
+import x.app.common.AbstractResult
+import x.app.common.user.UserIdentifiable
 
 /**
  *   @Project: common-user
@@ -9,6 +10,6 @@ import x.app.common.user.UserIdentifier
  *   @Author:  Iamee
  *   @Date:    2019-04-27 23:20
  */
-abstract class AbstractUserCommand(
+abstract class AbstractUserCommand<T : AbstractResult>(
         override val userId: String
-) : AbstractCommand(), UserIdentifier
+) : AbstractCommand<T>(), UserIdentifiable

@@ -6,9 +6,9 @@ import x.app.common.AbstractResult
  *   @Project: common-user
  *   @Package: x.app.common.user.command
  *   @Author:  Iamee
- *   @Date:    2019-04-27 23:22
+ *   @Date:    2019-05-01 0:53
  */
-class CreateUserCommand(userId: String = "") : AbstractUserCommand<CreateUserCommand.Result>(userId) {
+class LoginUserCommand(override var userId: String, val accountId: String, val password: String) : AbstractUserCommand<LoginUserCommand.Result>(userId = userId) {
 
     data class Result(val userId: String) : AbstractResult()
 

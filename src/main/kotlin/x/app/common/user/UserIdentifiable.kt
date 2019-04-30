@@ -1,6 +1,6 @@
 package x.app.common.user
 
-import x.app.common.Identifier
+import x.app.common.Identifiable
 
 /**
  *   @Project: user
@@ -8,7 +8,7 @@ import x.app.common.Identifier
  *   @Author:  Iamee
  *   @Date:    2019-04-27 23:17
  */
-interface UserIdentifier : Identifier {
+interface UserIdentifiable : Identifiable {
 
     val userId: String
 

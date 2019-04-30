@@ -1,7 +1,7 @@
 package x.app.common.user.event
 
 import x.app.common.AbstractEvent
-import x.app.common.user.UserIdentifier
+import x.app.common.user.UserIdentifiable
 
 /**
  *   @Project: common-user
@@ -12,4 +12,4 @@ import x.app.common.user.UserIdentifier
 abstract class AbstractUserEvent(
         override val userId: String,
         time: Long
-) : AbstractEvent(time), UserIdentifier
+) : AbstractEvent(time), UserIdentifiable
