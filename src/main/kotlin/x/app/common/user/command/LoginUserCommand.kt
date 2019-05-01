@@ -8,7 +8,7 @@ import x.app.common.AbstractResult
  *   @Author:  Iamee
  *   @Date:    2019-05-01 0:53
  */
-class LoginUserCommand(override var userId: String, val accountId: String, val password: String) : AbstractUserCommand<LoginUserCommand.Result>(userId = userId) {
+class LoginUserCommand(override var userId: String, val accountId: String, var password: String) : AbstractUserCommand<LoginUserCommand.Result>(userId = userId) {
 
     data class Result(val userId: String) : AbstractResult()
 
